@@ -70,15 +70,26 @@ keys.forEach((key)=>{
             content.append(div)
             keyFull.addEventListener("click",()=>{
                 keyFull.style.display = "none";
+                let title = document.createElement("h2");
+                let open = document.createElement("img");
+                open.src = "../img/chaste open.png";
+                open.style.width = "164px";
+                open.style.height = "164px";
+                title.textContent = "Вы открыли сундук и получили....Ни("
                 chst.style.display = "none";
                 let ffl = document.createElement("div");
                 ffl.style.cssText = `
                 display: flex;
-                width: 100%; height:100%
+                width: 100%; height:100%;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
+                gap: 32px;
             `
-            bg.style
+            ffl.append(open);
+            ffl.append(title);
+            bg.style.opacity = "0.5";
+            content.append(ffl)
             });
         }
     });
