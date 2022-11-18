@@ -1,9 +1,19 @@
 %hover-btn{
+    transition: $transition;
     &:hover{
         color: $red-color;
         opacity: 1;
     }
 }
+
+%hover-btn-menu{
+    &:hover{
+        color: $clear-color;
+        background-color: $red-color;
+        opacity: 1;
+    }
+}
+
 
 %hover-vk{transition: $transition; &:hover{color: $icon-vk-color;}}
 %hover-youtube{transition: $transition; &:hover{color: $icon-youtube-color;}}

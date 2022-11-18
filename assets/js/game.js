@@ -14,25 +14,43 @@ const getPosY = () => {
 }
 
 const Game = {
-    gameMenu: ["NewGame","Continue"],
+    gameMenu: [
+        {id:"levels",text:"Select Levels"},
+        {id:"continue",text:"Continue"},
+        {id:"extit",text:"exit"},
+    ],
     gameKeyFragments: ["../../assets/img/games/keyFragments/fragmentOne.png","../../assets/img/games/keyFragments/fragmentTwo.png","../../assets/img/games/keyFragments/fragmentThree.png"],
     gameBg: ["../../assets/img/games/BG/Menu.jpg","../../assets/img/games/BG/Play.jpg","../../assets/img/games/BG/Victory.jpg"],
     gamePrize: ["../../assets/img/games/prizes/prizeOne.png","../../assets/img/games/prizes/prizeTwo.png","../../assets/img/games/prizes/prizeThree.png"],
+    gameLevels: ["../../assets/img/games/levels/levelOne.jpg","../../assets/img/games/levels/levelTwo.jpg","../../assets/img/games/levels/levelThree.jpg"],
     gameTime: 0,
     gameFragmentCount: 0,
+
+    createButton(id,text){
+        const btn = document.createElement("button");
+        btn.classList.add("button","button_menu");
+        btn.id = id;
+        btn.textContent = text;
+        return btn;
+    },
 
     createMenu(args = this.gameMenu){
         const Menu = document.createElement("div");
         Menu.classList.add("menu");
-        for(let i = 0; i < args.length; i++){
-            let btn = document.createElement("button");
-            btn.classList.add("button","button_menu");
-            btn.textContent=args[i]
+        Menu.append(this.createButton("levels","Select Levels"));
+        Menu.append(this.createButton("continue","Continue"));
+
+        Menu.childNodes.forEach((btn) => {
             btn.addEventListener("click",()=>{
-                this.startGame();
+                let btnId = btn.id;
+                switch(btnId){
+                    case "levels": this.createLevels(); break;
+                    //case "continue": this.continueLevel();
+                }
             })
-            Menu.append(btn);
-        }
+        })
+
+
         gameBg.src = this.gameBg[0];
         gameWindow.prepend(Menu);
     },
@@ -45,9 +63,54 @@ const Game = {
         gameWindow.prepend(Play);
     },
 
+    createSlider(){
+        const slider = document.createElement("slider");
+        const left = document.createElement("span");
+        const right = document.createElement("span");
+        slider.classList.add("slider");
+        left.id = "left"; right.id = "right";
+        left.classList.add("icon","slide","icon-left");
+        right.classList.add("icon","slide","icon-right");
+        slider.append(left,right);
+        return slider;
+    },
 
     createLevels(){
+        let slider = this.createSlider();
+        let pos = 0;
+        const Levels = document.createElement("div");
+        const Slides = document.createElement("div");
+        Levels.classList.add("levels");
+        Slides.classList.add("slides");
         
+        document.querySelector(".menu").remove();
+        for (let i = 0; i < this.gameLevels.length; i++){
+            let level = document.createElement("img");
+            level.style.width = gameWindow.clientWidth + "px";
+            level.src = this.gameLevels[i];
+            level.id = i;
+            Slides.append(level);
+        }
+
+        Levels.append(Slides,slider);
+        gameWindow.prepend(Levels);
+
+        slider.childNodes.forEach((slide) => {
+            slide.addEventListener("click",() => {
+                let slideId = slide.id;
+                if (slideId === "left"){
+                    pos += gameWindow.clientWidth;
+                    document.querySelector(".slides").style.left = pos + "px";
+                }
+                else {
+                    pos -= gameWindow.clientWidth;
+                    document.querySelector(".slides").style.left = pos + "px";
+                }
+            });
+        });
+        
+
+
     },
 
     generatePrize(){

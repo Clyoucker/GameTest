@@ -19,6 +19,7 @@
     position: relative;
     font-size: $btn-size;
     cursor: pointer;
+    @extend %hover-btn;
 }
 
 .button-navigation{
@@ -38,6 +39,7 @@
     border-radius: $btn-radius;
     color: $btn-menu-color;
     background-color: $btn-menu-bg;
+    @extend %hover-btn-menu;
 }
 
 
@@ -81,3 +83,17 @@
 
 .icon-enlarge2,.icon-plus{position: absolute; width: 100%; height: 100%; opacity: 0; transform: rotate(-180deg);}
 
+
+// Slider
+
+
+.slider{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
