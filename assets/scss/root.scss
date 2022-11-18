@@ -1,0 +1,108 @@
+// Colors
+
+
+$page-bg: #0D0D0D;
+$header-bg: #FFFFFF;
+$footer-bg: #040404;
+
+$general-color: #151515;
+
+$clear-color: #FFFFFF;
+$red-color: #C65F2C;
+$orange-color: #DF5E1E;
+
+$grey-color: #4E4E4E;
+$grey-dark-color: #272931;
+
+$dark: #000000;
+$light-dark: #1A1A1D;
+
+$update-color: #ADFF00;
+$read-color: #7DEB6B;
+
+
+// Page
+
+
+$page-padding: 0 145px;
+$header-height: 64px;
+$main-height: 1fr;
+$footer-height: 320px;
+
+$content-gap: 6px;
+$nav-inside-gap: 64px;
+
+$slider-size-un-active: 24px;
+$slider-size-active: 32px;
+
+
+$info-comics-bg: $light-dark;
+$comics-jaw-round-table-mobile: 0 24px 24px 0;
+$comics-jaw-padding-table-mobile: 3px 9px;
+
+$btn-size: 24px;
+$title-size: 24px;
+
+$transition: all ease-in-out 0.3s;
+
+// Gaps
+
+
+$mini-gap: 6px;
+$out-gap: 24px;
+$inside-gap: 12px;
+
+
+// Inputs
+
+
+$inp-color: $clear-color;
+$inp-bg: rgba($color: $clear-color, $alpha: 0.12);
+$inp-radius: 6px;
+$inp-padding: 6px;
+
+
+// Buttons
+
+$btn-color: $clear-color;
+$btn-weight: 330px;
+$btn-height: 42px;
+$btn-padding: 8px;
+$btn-radius: 12px 6px 12px 6px;
+
+$btn-navig-color: $dark;
+$btn-navig-bg: rgba($color: $clear-color, $alpha: 0);
+
+$btn-confirm-color: $clear-color;
+$btn-confirm-bg: $red-color;
+
+$btn-cancel-color: $clear-color;
+$btn-cancel-bg: $grey-color;
+
+$btn-menu-color: $clear-color;
+$btn-menu-bg: $light-dark;
+
+// Avatars
+
+
+$avatar-mini-size: 42px;
+
+
+// Icons
+
+
+$icon-bg: $clear-color;
+$icon-size-desktop: 32px;
+$icon-mini-size-desktop: 20px;
+$icon-size-mobile: 8vmin;
+$icon-vk-color: #4680c2;
+$icon-youtube-color: #f00;
+$icon-twitter-color: #1da1f2;
+$icon-twitch-color: #6441a4;
+$icon-theme-color: #f00;
+
+// Texts
+
+
+$title-size: 32px;
+$footer-title-size: 24px;

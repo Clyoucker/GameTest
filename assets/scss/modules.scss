@@ -1,0 +1,83 @@
+//Inputs
+
+
+
+.input{
+    color: $inp-color;
+    background-color: $inp-bg;
+    border-radius: $inp-radius;
+    padding: $inp-padding;
+}
+
+
+
+//Buttons
+
+
+
+.button{
+    position: relative;
+    font-size: $btn-size;
+    cursor: pointer;
+}
+
+.button-navigation{
+    color: $btn-navig-color;
+    background-color: $btn-navig-bg;
+    margin: 0 24px;
+}
+
+.button-confirmation{
+    color: $btn-confirm-color;
+    background-color: $btn-confirm-bg;
+}
+
+.button_menu{
+    width: $btn-weight;
+    padding: $btn-padding;
+    border-radius: $btn-radius;
+    color: $btn-menu-color;
+    background-color: $btn-menu-bg;
+}
+
+
+//Icons
+
+
+
+.icons{}
+
+.icons-developer{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    left: 0;
+    bottom: 6px;
+    width: 100%;
+    height: auto;
+}
+
+.icon{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //color: $icon-bg;
+}
+
+.icon{font-size: $icon-size-desktop;}
+
+.icon-vk{@extend %hover-vk;}
+
+.icon-youtube{@extend %hover-youtube;}
+
+.icon-twitter{@extend %hover-twitter;}
+
+.icon-twitch{@extend %hover-twitch;}
+
+.icon-theme{@extend %hover-theme;}
+.icon-theme-dark{color: $dark;}
+
+.icon-enlarge2,.icon-plus{position: absolute; width: 100%; height: 100%; opacity: 0; transform: rotate(-180deg);}
+

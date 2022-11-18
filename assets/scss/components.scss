@@ -1,0 +1,133 @@
+// Avatar
+
+
+.avatar{
+
+}
+
+.avatar-mini{
+    width: $avatar-mini-size;
+    height: $avatar-mini-size;
+}
+
+.avatar_type{
+    color: $red-color;
+}
+
+// Developers
+
+.mini-developer{
+    &__out-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+}
+
+
+// Navigation
+
+
+.navigation{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $out-gap;
+    flex-grow: 1;
+}
+
+.navigation_row{
+    justify-content: center;
+}
+
+// Texts
+
+
+.title{font-size: $title-size;}
+
+.footer_title{font-size: $footer-title-size; color: $orange-color;}
+
+
+// Sections
+
+
+.section{
+    margin-bottom: 64px;
+    &:nth-last-child(1){margin-bottom: 0;}
+    &-content{
+        &>*:nth-child(even){
+            .section-block__texts{order: 3;}
+            .section-block__image{order: 2;}
+        }
+        &>*{margin-bottom: 32px;}
+        &>*:nth-last-child(1){margin-bottom: 0;}
+    }
+    &-block{
+        display: flex;
+        margin-bottom: 32px;
+        gap: $out-gap;
+    }
+}
+
+.section-game{
+    .game{
+        position: relative;
+        width: 100%;
+        height: 640px;
+        z-index: 10;
+        &__content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            .win{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            .play{
+                width: 100%;
+                height: 100%;
+            }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                gap: $out-gap;
+                color: $red-color;
+            }
+        }
+        &_bg{position: absolute; z-index: 0; background-color: $dark;}
+    }
+}
+
+.section-game-info{
+    .section-block{
+        &__image{
+            width: 640px; max-height: 360px;
+        }
+    }
+}
+
+
+// GameAssets
+
+
+.fragment{
+    width: 12px; height: 12px;
+    &>img{object-fit: contain;}
+}
+
+.prize{
+    width: 256px; height: 256px;
+}
+
+.win-text{
+    font-size: 32px;
+    &>*{color: $red-color;}
+}

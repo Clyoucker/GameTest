@@ -1,0 +1,13 @@
+%hover-btn{
+    &:hover{
+        color: $red-color;
+        opacity: 1;
+    }
+}
+
+%hover-vk{transition: $transition; &:hover{color: $icon-vk-color;}}
+%hover-youtube{transition: $transition; &:hover{color: $icon-youtube-color;}}
+%hover-twitter{transition: $transition; &:hover{color: $icon-twitter-color;}}
+%hover-twitch{transition: $transition; &:hover{color: $icon-twitch-color;}}
+%hover-theme{transition: $transition; &:hover{color: $icon-theme-color;}}
+//%hover-icon{transition: $transition; &:hover{.icon{opacity: 1; transform: rotate(180deg); font-size: 48px; color: $red-color;}}}
